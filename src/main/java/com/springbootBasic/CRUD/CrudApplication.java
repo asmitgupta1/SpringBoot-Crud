@@ -25,16 +25,18 @@ public class CrudApplication {
 
 		// code to implement MVC
 
-		ApplicationContext context = SpringApplication.run(CrudApplication.class, args);
-		StudentService studentService = context.getBean(StudentService.class);
-		Student s = context.getBean(Student.class);
-		s.setSid(32);
-		s.setMarks(20);
-		s.setSname("test1");
-		studentService.addStudent(s);
+//		ApplicationContext context = SpringApplication.run(CrudApplication.class, args);
+//		StudentService studentService = context.getBean(StudentService.class);
+//		Student s = context.getBean(Student.class);
+//		s.setSid(32);
+//		s.setMarks(20);
+//		s.setSname("test1");
+//		studentService.addStudent(s);
+//
+//		List<Student> students = studentService.findAll();
+//		System.out.println(students.toString());
 
-		List<Student> students = studentService.findAll();
-		System.out.println(students.toString());
+		SpringApplication.run(CrudApplication.class, args);
 
 	}
 
