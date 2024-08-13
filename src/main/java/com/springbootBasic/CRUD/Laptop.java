@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Laptop implements Computer {
     Laptop(){
-        System.out.println("inside Laptop Constructor");
+//        System.out.println("inside Laptop Constructor");
     }
 
     @Override

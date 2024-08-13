@@ -13,7 +13,7 @@ public class Alien {
 
     private Computer com;
     Alien(){
-       System.out.println("Alien constructor called");
+//       System.out.println("Alien constructor called");
     }
 
     public Computer getCom() {

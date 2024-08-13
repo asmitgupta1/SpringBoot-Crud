@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class Desktop implements Computer {
 
     Desktop(){
-        System.out.println("inside Desktop constructor");
+//        System.out.println("inside Desktop constructor");
     }
     @Override
     public void compile(){
