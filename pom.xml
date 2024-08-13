@@ -72,12 +72,10 @@
 			<artifactId>tomcat-jasper</artifactId>
 			<version>11.0.0-M22</version>
 		</dependency>
-
-
-
-
-
-
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
 
 
 	</dependencies>
