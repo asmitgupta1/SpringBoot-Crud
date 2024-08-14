@@ -41,6 +41,7 @@ public class JobService {
 //        return repo.getJob(postId);
 //    }
     public Optional<JobPost> getJob(int postId) {
+
         return jobsRepo.findById(postId);
     }
 
