@@ -2,7 +2,10 @@ package com.springbootBasic.CRUD.controller;
 
 import com.springbootBasic.CRUD.model.JobPost;
 import com.springbootBasic.CRUD.service.JobService;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +18,13 @@ public class JobRestController {
 
     @Autowired
     private JobService service;
+
+
+
+//    @GetMapping("/csrf-token")
+//    public CsrfToken getToken(HttpServletRequest request){
+//        return (CsrfToken) request.getAttribute("_csrf");
+//    }
 
     @GetMapping("/jobPosts")
     public List<JobPost> getAllJobs() {
