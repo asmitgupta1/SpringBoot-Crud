@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RestController
@@ -22,18 +23,23 @@ public class JobRestController {
     }
 
     @GetMapping("/jobPost/{postId}")
-    public JobPost getJob(@PathVariable int postId) {
+    public Optional<JobPost> getJob(@PathVariable int postId) {
         return service.getJob(postId);
     }
 
+    @GetMapping("/jobPost/{keyword1}/{keyword2}")
+    public List<JobPost> getJobByKeyword(@PathVariable String keyword1, @PathVariable String keyword2) {
+        return service.getJobByKeyword(keyword1, keyword2);
+    }
+
     @PostMapping("jobPost")
-    public JobPost addJob(@RequestBody JobPost jobPost) {
+    public Optional<JobPost> addJob(@RequestBody JobPost jobPost) {
         service.addJob(jobPost);
         return service.getJob(jobPost.getPostId());
     }
 
     @PutMapping("jobPost")
-    public JobPost updateJob(@RequestBody JobPost jobPost) {
+    public Optional<JobPost> updateJob(@RequestBody JobPost jobPost) {
         service.updateJob(jobPost);
         return service.getJob(jobPost.getPostId());
     }

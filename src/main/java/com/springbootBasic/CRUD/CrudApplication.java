@@ -2,6 +2,9 @@ package com.springbootBasic.CRUD;
 
 import com.springbootBasic.CRUD.config.AppConfig;
 import com.springbootBasic.CRUD.model.Student;
+import com.springbootBasic.CRUD.model.Teacher;
+import com.springbootBasic.CRUD.repo.StudentRepo;
+import com.springbootBasic.CRUD.repo.TeacherRepo;
 import com.springbootBasic.CRUD.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -36,8 +39,41 @@ public class CrudApplication {
 //		List<Student> students = studentService.findAll();
 //		System.out.println(students.toString());
 
-		SpringApplication.run(CrudApplication.class, args);
 
+		// code to learn jpa
+		ApplicationContext context = SpringApplication.run(CrudApplication.class, args);
+
+
+		TeacherRepo trepo =  context.getBean(TeacherRepo.class);
+		Teacher t1 = context.getBean(Teacher.class);
+		Teacher t2 = context.getBean(Teacher.class);
+		Teacher t3 = context.getBean(Teacher.class);
+
+//		t1.setName("test1");
+//		t1.setMarks(1);
+//		t1.setRollNo(1);
+//
+//		t2.setName("test2");
+//		t2.setMarks(2);
+//		t2.setRollNo(2);
+//
+//		t3.setName("test3");
+//		t3.setMarks(3);
+//		t3.setRollNo(3);
+//
+//		trepo.save(t2);
+//		trepo.save(t3);
+//
+//		System.out.println(trepo.findAll());
+//		System.out.println(trepo.findById(1));
+//		System.out.println(trepo.findByName("test1"));
+
+//		t3.setName("test3");
+//		t3.setMarks(4);
+//		t3.setRollNo(3);
+////
+//		trepo.save (t3);
+//		trepo.deleteById(3);
 	}
 
 }
