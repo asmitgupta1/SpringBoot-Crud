@@ -2,6 +2,7 @@ package com.springbootBasic.CRUD.controller;
 
 
 import com.springbootBasic.CRUD.feign.Hello;
+import com.springbootBasic.CRUD.model.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,9 @@ public class GetHello {
     @Autowired
     Hello helloInterface;
     @GetMapping("/getHello")
-    public String getHello(@RequestBody String hello){
-            return helloInterface.getHello("b");
+    public String Hello(@RequestBody Test hello){
+        System.out.println("//////////////////");
+        System.out.println(hello.getHello());
+            return helloInterface.getHello(hello.getHello());
     }
 }
