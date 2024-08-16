@@ -7,6 +7,8 @@ services:
       - "8080:8080"
     networks:
       - s-network
+    volumes:
+      - postgres-s-data:/var/lib/postgresql/data
 
   postgres:
     image: postgres:latest
@@ -18,7 +20,12 @@ services:
       - "5433:5432"
     networks:
       - s-network
+    volumes:
+      - postgres-s-data:/var/lib/postgresql/data
 
 networks:
   s-network:
     driver: bridge
+
+volumes:
+  postgres-s-data:
