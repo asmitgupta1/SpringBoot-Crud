@@ -66,4 +66,13 @@ public class SecurityConfig {
     }
 
 
+    // filter chains -> SecurityFilterChain (JwtFilter, UsernamePasswordAuthenticationFilter)
+// JwtFilter -> SecurityContextHolder(securityContext -> isAuthenticated), AuthenticationManager(AuthenticationProvider)
+// UsernamePasswordAuthenticationFilter -> SecurityContextHolder(securityContext -> isAuthenticated), AuthenticationManager(AuthenticationProvider)
+
+//login -> if(username-password) -> Actual JWT with help of Key
+// username -> tanishq
+// key -> 78cg4bud
+// actual JWT -> wlkgedyuwebdg78g3
+
 }
